@@ -8,6 +8,7 @@ export interface todo {
     id: string
     todo: string
     isComplete: boolean
+    isDelete:boolean
   }
 
 export interface icon {
@@ -18,4 +19,9 @@ export interface icon {
 export interface button {
     children: JSX.Element
     onClick: () => void
+}
+
+export interface item { 
+    children: JSX.Element, 
+    isDelete: boolean 
 }

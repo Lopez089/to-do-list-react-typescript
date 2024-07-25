@@ -8,14 +8,16 @@ export const useToDo = () => {
     const [newTask, setNewTask] = useState<todo>({
       id: '',
       todo: '',
-      isComplete: false
+      isComplete: false,
+      isDelete:false,
     })
   
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
       setNewTask({
         id: String(toDoList.length + 1),
         todo: e.target.value,
-        isComplete: false
+        isComplete: false,
+        isDelete:false,
       })
     }
   
@@ -26,7 +28,8 @@ export const useToDo = () => {
           setNewTask({
             id: '',
             todo: '',
-            isComplete: false
+            isComplete: false,
+            isDelete:false
           })
         }
       }
@@ -34,8 +37,12 @@ export const useToDo = () => {
     })
   
     const handleDeleteTask = (id: string) => {
-      const newState = toDoList.filter(todo => todo.id !== id)
-      setToDoList(newState)
+      setToDoList(toDoList.map( todo => todo.id === id ? {...todo, isDelete:true}: todo ))
+      setTimeout(()=>{
+        const newState = toDoList.filter(todo => todo.id !== id)
+        setToDoList(newState)
+      },1500)
+      
     }
   
     const handleComplete = (id: string) => {

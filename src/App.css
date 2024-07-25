@@ -14,11 +14,6 @@
   color:  var(--color-black) ;
 }
 
-.icon{
-  color: var(--color-black);
-  text-decoration: none !important ;
-}
-
 input{
   color: var(--color-black);
   background-color: var(--color-white);
@@ -26,4 +21,13 @@ input{
   border: none;
   font-size: 1rem;
   padding: 1rem 0;
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  #root{
+    margin: 0;
+    padding: 0;
+    
+  }
 }

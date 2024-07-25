@@ -26,10 +26,17 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  
 }
 
 h1 {
   color: var(--color-black);
   font-size: 2.2em;
   line-height: 1.1;
+}
+
+@media screen and (max-width: 767px) {
+  body{
+    background-color: var(--color-white);
+  }
 }

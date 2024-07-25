@@ -29,7 +29,7 @@ export const App = () => {
             {
               toDoList.map(todo => {
                 return (
-                  <Item key={todo.id}>
+                  <Item key={todo.id} isDelete={todo.isDelete}>
                     <>
                       <p className={complete(todo.isComplete)}>{todo.todo}</p>
                       <div className='action-item'>
@@ -52,7 +52,9 @@ export const App = () => {
                     value={newTask?.todo}
                     onChange={(e) => handleOnChange(e)}
                     onKeyDown={(e) => { handleKeyPress(e) }}
-                    type="text" /> : ''
+                    type="text"
+                    autoFocus
+                  /> : ''
               }
             </div>
           </>

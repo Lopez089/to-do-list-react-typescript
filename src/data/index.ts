@@ -3,17 +3,17 @@ import { todo } from "../types"
 export const toDo: todo[] = [
     {
       id: '324234',
-      todo: 'hacer la compra',
+      todo: 'Hacer la maletas',
       isComplete: true
     },
     {
       id: '32423wer4',
-      todo: 'correr',
+      todo: 'Correr',
       isComplete: false
     },
     {
       id: '3232423wer4',
-      todo: 'hacer la compra',
+      todo: 'Comprar fruta',
       isComplete: false
     }
   ]

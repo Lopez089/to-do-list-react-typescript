@@ -31,6 +31,7 @@ export const useToDo = () => {
             isComplete: false,
             isDelete:false
           })
+          setToggleNewTask(false)
         }
       }
   
